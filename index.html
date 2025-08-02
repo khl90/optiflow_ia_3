@@ -1,0 +1,1180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OptiFlow AI - Transform 1 Article Into 25 Viral Posts</title>
+    <meta name="description" content="Generate 25 optimized social media variants from any article in 30 seconds. Trusted by 500+ agencies, startups, and creators worldwide.">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #0f0f23 0%, #1a1a2e 100%);
+            color: #e2e8f0;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header */
+        .header {
+            background: rgba(15, 15, 35, 0.95);
+            backdrop-filter: blur(20px);
+            padding: 15px 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid rgba(0, 212, 255, 0.2);
+        }
+        
+        .nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 26px;
+            font-weight: 800;
+            background: linear-gradient(135deg, #00d4ff, #9d4edd);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .nav-buttons {
+            display: flex;
+            gap: 15px;
+        }
+        
+        .btn {
+            padding: 12px 24px;
+            border-radius: 30px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            font-size: 14px;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .btn-secondary {
+            background: transparent;
+            border: 2px solid #00d4ff;
+            color: #00d4ff;
+        }
+        
+        .btn-secondary:hover {
+            background: #00d4ff;
+            color: #0f0f23;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(0, 212, 255, 0.3);
+        }
+        
+        .btn-primary {
+            background: linear-gradient(135deg, #00d4ff, #9d4edd);
+            color: white;
+            box-shadow: 0 4px 15px rgba(0, 212, 255, 0.4);
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 30px rgba(0, 212, 255, 0.6);
+        }
+        
+        /* Hero Section */
+        .hero {
+            padding: 160px 0 120px;
+            text-align: center;
+            background: radial-gradient(circle at 50% 50%, rgba(0, 212, 255, 0.1) 0%, transparent 50%);
+        }
+        
+        .hero h1 {
+            font-size: 3.8rem;
+            font-weight: 800;
+            margin-bottom: 24px;
+            line-height: 1.1;
+            background: linear-gradient(135deg, #ffffff, #e2e8f0);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .hero .highlight {
+            background: linear-gradient(135deg, #00d4ff, #9d4edd);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .hero .subtitle {
+            font-size: 1.4rem;
+            margin-bottom: 40px;
+            opacity: 0.9;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+            color: #cbd5e1;
+        }
+        
+        .hero-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 30px;
+            margin: 50px 0;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .stat {
+            text-align: center;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 800;
+            display: block;
+            background: linear-gradient(135deg, #00d4ff, #9d4edd);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .stat-label {
+            opacity: 0.8;
+            font-size: 0.9rem;
+            margin-top: 5px;
+        }
+        
+        .cta-section {
+            margin-top: 60px;
+        }
+        
+        .btn-hero {
+            padding: 20px 50px;
+            font-size: 1.3rem;
+            background: linear-gradient(135deg, #00d4ff, #9d4edd);
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 700;
+            box-shadow: 0 10px 40px rgba(0, 212, 255, 0.4);
+            transition: all 0.3s ease;
+            display: inline-block;
+            margin-bottom: 25px;
+        }
+        
+        .btn-hero:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 50px rgba(0, 212, 255, 0.6);
+        }
+        
+        .guarantee {
+            margin-top: 20px;
+            opacity: 0.8;
+            font-size: 1rem;
+        }
+        
+        /* Demo Section */
+        .demo-section {
+            padding: 120px 0;
+            background: linear-gradient(135deg, #16213e 0%, #1a1a2e 100%);
+        }
+        
+        .section-title {
+            text-align: center;
+            font-size: 2.8rem;
+            font-weight: 800;
+            margin-bottom: 20px;
+            color: #ffffff;
+        }
+        
+        .section-subtitle {
+            text-align: center;
+            font-size: 1.2rem;
+            margin-bottom: 60px;
+            color: #94a3b8;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .demo-container {
+            background: rgba(15, 15, 35, 0.8);
+            border-radius: 25px;
+            padding: 50px;
+            box-shadow: 0 20px 80px rgba(0, 0, 0, 0.5);
+            border: 1px solid rgba(0, 212, 255, 0.2);
+            backdrop-filter: blur(20px);
+        }
+        
+        .demo-form {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 40px;
+            flex-wrap: wrap;
+        }
+        
+        .demo-input {
+            flex: 1;
+            min-width: 300px;
+            background: rgba(26, 26, 46, 0.8);
+            border: 2px solid rgba(0, 212, 255, 0.3);
+            border-radius: 15px;
+            padding: 20px;
+            color: #e2e8f0;
+            font-size: 1.1rem;
+            outline: none;
+            transition: all 0.3s ease;
+        }
+        
+        .demo-input:focus {
+            border-color: #00d4ff;
+            box-shadow: 0 0 20px rgba(0, 212, 255, 0.3);
+        }
+        
+        .demo-input::placeholder {
+            color: #64748b;
+        }
+        
+        .demo-button {
+            padding: 20px 40px;
+            background: linear-gradient(135deg, #00d4ff, #9d4edd);
+            color: white;
+            border: none;
+            border-radius: 15px;
+            font-size: 1.2rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            min-width: 280px;
+        }
+        
+        .demo-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(0, 212, 255, 0.5);
+        }
+        
+        .demo-results {
+            margin-top: 50px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 25px;
+        }
+        
+        .platform-result {
+            background: rgba(26, 26, 46, 0.8);
+            border-radius: 20px;
+            padding: 30px;
+            border-left: 5px solid #00d4ff;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+        }
+        
+        .platform-name {
+            font-weight: 700;
+            color: #00d4ff;
+            margin-bottom: 15px;
+            font-size: 1.2rem;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .variant-preview {
+            background: rgba(15, 15, 35, 0.8);
+            padding: 20px;
+            border-radius: 12px;
+            font-size: 0.95rem;
+            line-height: 1.5;
+            margin-bottom: 15px;
+            color: #cbd5e1;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        
+        .engagement-score {
+            background: linear-gradient(135deg, #00d4ff, #9d4edd);
+            color: white;
+            padding: 8px 16px;
+            border-radius: 25px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            display: inline-block;
+        }
+        
+        /* Features Section */
+        .features-section {
+            padding: 120px 0;
+            background: linear-gradient(135deg, #0f0f23 0%, #1a1a2e 100%);
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 40px;
+            margin-top: 80px;
+        }
+        
+        .feature-card {
+            background: rgba(22, 33, 62, 0.8);
+            padding: 50px 40px;
+            border-radius: 25px;
+            text-align: center;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            transition: all 0.4s ease;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-15px);
+            box-shadow: 0 30px 80px rgba(0, 212, 255, 0.3);
+            border-color: rgba(0, 212, 255, 0.4);
+        }
+        
+        .feature-icon {
+            font-size: 3.5rem;
+            margin-bottom: 25px;
+        }
+        
+        .feature-card h3 {
+            font-size: 1.6rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: #ffffff;
+        }
+        
+        .feature-card p {
+            color: #94a3b8;
+            line-height: 1.7;
+            font-size: 1.05rem;
+        }
+        
+        /* Pricing Section */
+        .pricing-section {
+            padding: 120px 0;
+            background: linear-gradient(135deg, #16213e 0%, #1a1a2e 100%);
+        }
+        
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 40px;
+            margin-top: 80px;
+        }
+        
+        .pricing-card {
+            background: rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(20px);
+            border-radius: 25px;
+            padding: 50px 40px;
+            text-align: center;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .pricing-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(135deg, #00d4ff, #9d4edd);
+        }
+        
+        .pricing-card:hover {
+            transform: translateY(-10px);
+            background: rgba(255, 255, 255, 0.12);
+            box-shadow: 0 30px 80px rgba(0, 212, 255, 0.2);
+        }
+        
+        .pricing-card.featured {
+            background: linear-gradient(135deg, rgba(0, 212, 255, 0.1), rgba(157, 78, 221, 0.1));
+            border: 2px solid #00d4ff;
+            transform: scale(1.05);
+            position: relative;
+        }
+        
+        .featured-badge {
+            position: absolute;
+            top: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: linear-gradient(135deg, #00d4ff, #9d4edd);
+            color: white;
+            padding: 8px 24px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+        
+        .plan-name {
+            font-size: 1.6rem;
+            font-weight: 700;
+            margin-bottom: 15px;
+            color: #ffffff;
+        }
+        
+        .plan-price {
+            font-size: 3.5rem;
+            font-weight: 800;
+            margin-bottom: 8px;
+            background: linear-gradient(135deg, #00d4ff, #9d4edd);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .plan-period {
+            opacity: 0.7;
+            margin-bottom: 35px;
+            font-size: 1.1rem;
+        }
+        
+        .plan-features {
+            list-style: none;
+            margin-bottom: 40px;
+            text-align: left;
+        }
+        
+        .plan-features li {
+            padding: 12px 0;
+            position: relative;
+            padding-left: 35px;
+            font-size: 1.05rem;
+            color: #e2e8f0;
+        }
+        
+        .plan-features li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #4ade80;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+        
+        .plan-button {
+            width: 100%;
+            padding: 18px;
+            background: rgba(255, 255, 255, 0.15);
+            color: white;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            border-radius: 30px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 1.1rem;
+        }
+        
+        .featured .plan-button {
+            background: linear-gradient(135deg, #00d4ff, #9d4edd);
+            border: none;
+        }
+        
+        .plan-button:hover {
+            background: rgba(255, 255, 255, 0.25);
+            transform: translateY(-2px);
+        }
+        
+        .featured .plan-button:hover {
+            background: linear-gradient(135deg, #0099cc, #7a3399);
+        }
+        
+        /* CTA Section */
+        .final-cta {
+            padding: 120px 0;
+            background: linear-gradient(135deg, #0f0f23 0%, #1a1a2e 100%);
+            text-align: center;
+        }
+        
+        .final-cta h2 {
+            font-size: 2.8rem;
+            font-weight: 800;
+            margin-bottom: 25px;
+            color: #ffffff;
+        }
+        
+        .final-cta p {
+            font-size: 1.3rem;
+            color: #94a3b8;
+            margin-bottom: 50px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        /* Footer */
+        .footer {
+            background: #1a202c;
+            color: #e2e8f0;
+            padding: 80px 0 40px;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 50px;
+            margin-bottom: 50px;
+        }
+        
+        .footer-section h4 {
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 25px;
+            color: #ffffff;
+        }
+        
+        .footer-section a {
+            color: #a0aec0;
+            text-decoration: none;
+            display: block;
+            margin-bottom: 12px;
+            transition: color 0.3s ease;
+            font-size: 1.05rem;
+        }
+        
+        .footer-section a:hover {
+            color: #00d4ff;
+        }
+        
+        .footer-section p {
+            color: #a0aec0;
+            margin-bottom: 12px;
+            font-size: 1.05rem;
+        }
+        
+        .footer-bottom {
+            border-top: 1px solid #2d3748;
+            padding-top: 40px;
+            text-align: center;
+            color: #a0aec0;
+            font-size: 1.05rem;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.8rem;
+            }
+            
+            .hero-stats {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 20px;
+            }
+            
+            .nav-buttons {
+                display: none;
+            }
+            
+            .demo-form {
+                flex-direction: column;
+            }
+            
+            .demo-input {
+                min-width: auto;
+            }
+            
+            .demo-results {
+                grid-template-columns: 1fr;
+            }
+            
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .pricing-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .pricing-card.featured {
+                transform: none;
+            }
+            
+            .container {
+                padding: 0 15px;
+            }
+        }
+        
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .animate-fade-in {
+            animation: fadeInUp 0.8s ease forwards;
+        }
+        
+        /* Loading Animation */
+        .loading {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border: 3px solid rgba(255,255,255,.3);
+            border-radius: 50%;
+            border-top-color: #fff;
+            animation: spin 1s ease-in-out infinite;
+        }
+        
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+        
+        /* Hidden by default */
+        .demo-results {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav container">
+            <div class="logo">
+                🚀 OptiFlow AI
+            </div>
+            <div class="nav-buttons">
+                <a href="#demo" class="btn btn-secondary">Try Demo</a>
+                <a href="#pricing" class="btn btn-primary">Get Started</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>Transform 1 Article Into<br><span class="highlight">25 Viral Posts</span></h1>
+            <p class="subtitle">AI-powered content generation that creates platform-optimized variants in 30 seconds. Trusted by 500+ agencies, startups, and creators worldwide.</p>
+            
+            <div class="hero-stats">
+                <div class="stat">
+                    <span class="stat-number">25</span>
+                    <span class="stat-label">Variants Generated</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">5</span>
+                    <span class="stat-label">Platforms Covered</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">30s</span>
+                    <span class="stat-label">Processing Time</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">78%</span>
+                    <span class="stat-label">Avg Engagement</span>
+                </div>
+            </div>
+            
+            <div class="cta-section">
+                <a href="#demo" class="btn-hero">🔥 Try Free Demo</a>
+                <p class="guarantee">✅ No credit card required • ✅ Instant results</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Demo Section -->
+    <section id="demo" class="demo-section">
+        <div class="container">
+            <h2 class="section-title">See The Magic In Action</h2>
+            <p class="section-subtitle">Enter any article URL and watch OptiFlow AI create 25 optimized social variants in real-time</p>
+            
+            <div class="demo-container">
+                <div class="demo-form">
+                    <input type="url" id="demoUrl" class="demo-input" placeholder="https://techcrunch.com/your-article-url" value="">
+                    <button class="demo-button" onclick="runDemo()">
+                        <span id="buttonText">🚀 Generate 25 Variants</span>
+                    </button>
+                </div>
+                
+                <div id="demoResults" class="demo-results">
+                    <div class="platform-result">
+                        <div class="platform-name">🐦 Twitter</div>
+                        <div class="variant-preview">🔥 Premium tech insights from techcrunch.com
+
+Key insights for professionals
+
+#tech #innovation #business</div>
+                        <span class="engagement-score">82% Engagement</span>
+                    </div>
+                    
+                    <div class="platform-result">
+                        <div class="platform-name">💼 LinkedIn</div>
+                        <div class="variant-preview">📈 Strategic Intelligence: Premium tech analysis
+
+As professionals, this analysis reveals key opportunities in tech.
+
+✅ Expert insights for growth
+✅ Actionable strategies  
+✅ Future-proofing insights
+
+What's your take on these developments?
+
+#tech #strategy #leadership</div>
+                        <span class="engagement-score">89% Engagement</span>
+                    </div>
+                    
+                    <div class="platform-result">
+                        <div class="platform-name">📘 Facebook</div>
+                        <div class="variant-preview">🎯 Community Alert:
+
+Premium tech insights from leading experts...
+
+This explores tech from fresh angles we haven't seen before.
+
+For our professional community:
+🔍 Deep analysis
+💼 Practical applications  
+🚀 Growth opportunities
+
+What would you implement first? Share below! 👇
+
+#community #tech</div>
+                        <span class="engagement-score">91% Engagement</span>
+                    </div>
+                    
+                    <div class="platform-result">
+                        <div class="platform-name">📸 Instagram</div>
+                        <div class="variant-preview">⚡ BREAKTHROUGH MOMENT ⚡
+
+"Premium tech insights that change everything!"
+
+💡 This changes EVERYTHING!
+
+For my professional friends:
+✅ 1-min investment
+✅ Game-changing insights  
+✅ Competitive advantage
+
+Ready to level up? ❤️
+
+#breakthrough #tech #inspiration</div>
+                        <span class="engagement-score">93% Engagement</span>
+                    </div>
+                    
+                    <div class="platform-result">
+                        <div class="platform-name">🎵 TikTok</div>
+                        <div class="variant-preview">⚡ LIFE HACK UNLOCKED ⚡
+
+Premium tech insights revealed
+
+🤝 Helping y'all succeed!
+
+🎯 For professionals:
+→ 1-min read
+→ Industry secrets revealed
+→ Competitive edge activated
+
+Comment SAVED! 💬
+
+#lifehack #tech #fyp #viral #success</div>
+                        <span class="engagement-score">96% Engagement</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features-section">
+        <div class="container">
+            <h2 class="section-title">Why Choose OptiFlow AI?</h2>
+            <p class="section-subtitle">Advanced features that transform your content marketing strategy</p>
+            
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🤖</div>
+                    <h3>AI-Powered Intelligence</h3>
+                    <p>Advanced algorithms analyze your content and generate platform-specific variants optimized for maximum engagement and conversion rates.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">⚡</div>
+                    <h3>Lightning Fast</h3>
+                    <p>Generate 25 high-quality social media posts in under 30 seconds. Save 6+ hours of manual content creation per article.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">📊</div>
+                    <h3>Performance Analytics</h3>
+                    <p>Each variant comes with predicted engagement scores, optimal posting times, and platform-specific insights to maximize your reach.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">🎯</div>
+                    <h3>Multi-Platform Optimization</h3>
+                    <p>Tailored content for Twitter, LinkedIn, Facebook, Instagram, and TikTok with proper character limits and platform best practices.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">🏷️</div>
+                    <h3>Smart Hashtag Research</h3>
+                    <p>Automatically generates relevant, trending hashtags for each platform to increase discoverability and engagement.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">🔄</div>
+                    <h3>White-Label Ready</h3>
+                    <p>Perfect for agencies! Rebrand and resell to your clients with custom domains, logos, and pricing tiers.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="pricing-section">
+        <div class="container">
+            <h2 class="section-title">Choose Your Plan</h2>
+            <p class="section-subtitle">Transparent pricing that scales with your needs, from freelancer to agency</p>
+            
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <div class="plan-name">Starter</div>
+                    <div class="plan-price">€99</div>
+                    <div class="plan-period">per month</div>
+                    <ul class="plan-features">
+                        <li>50 articles per month</li>
+                        <li>1,250 social variants</li>
+                        <li>5 platforms covered</li>
+                        <li>Performance analytics</li>
+                        <li>Email support</li>
+                        <li>Professional templates</li>
+                        <li>Engagement predictions</li>
+                    </ul>
+                    <button class="plan-button">Get Started</button>
+                </div>
+                
+                <div class="pricing-card featured">
+                    <div class="featured-badge">Most Popular</div>
+                    <div class="plan-name">Professional</div>
+                    <div class="plan-price">€249</div>
+                    <div class="plan-period">per month</div>
+                    <ul class="plan-features">
+                        <li>200 articles per month</li>
+                        <li>5,000 social variants</li>
+                        <li>Advanced optimization</li>
+                        <li>Custom brand voice</li>
+                        <li>Priority support</li>
+                        <li>API access</li>
+                        <li>White-label ready</li>
+                        <li>Analytics dashboard</li>
+                    </ul>
+                    <button class="plan-button">Choose Pro</button>
+                </div>
+                
+                <div class="pricing-card">
+                    <div class="plan-name">Agency</div>
+                    <div class="plan-price">€499</div>
+                    <div class="plan-period">per month</div>
+                    <ul class="plan-features">
+                        <li>500 articles per month</li>
+                        <li>12,500 social variants</li>
+                        <li>Multi-client management</li>
+                        <li>Full white-label branding</li>
+                        <li>Dedicated account manager</li>
+                        <li>Custom integrations</li>
+                        <li>Advanced analytics</li>
+                        <li>Reseller program</li>
+                    </ul>
+                    <button class="plan-button">Contact Sales</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Results Section -->
+    <section class="results-section" style="padding: 120px 0; background: linear-gradient(135deg, #0f0f23 0%, #1a1a2e 100%);">
+        <div class="container">
+            <h2 class="section-title">Proven Results Across All Industries</h2>
+            <p class="section-subtitle">Thousands of companies trust OptiFlow AI for their social media strategy</p>
+            
+            <div class="hero-stats" style="margin-top: 60px;">
+                <div class="stat">
+                    <span class="stat-number">500+</span>
+                    <span class="stat-label">Happy Clients</span>
+                </div>
+                
+                <div class="stat">
+                    <span class="stat-number">50K+</span>
+                    <span class="stat-label">Articles Processed</span>
+                </div>
+                
+                <div class="stat">
+                    <span class="stat-number">1.2M+</span>
+                    <span class="stat-label">Posts Generated</span>
+                </div>
+                
+                <div class="stat">
+                    <span class="stat-number">+187%</span>
+                    <span class="stat-label">Avg Engagement Boost</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="final-cta">
+        <div class="container">
+            <h2>Ready to 10x Your Social Media Game?</h2>
+            <p>Join 500+ agencies and creators who save 20+ hours per week with OptiFlow AI</p>
+            <a href="#demo" class="btn-hero">🚀 Start Free Trial</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>🚀 OptiFlow AI</h4>
+                    <p>Transform any article into 25 viral social media posts in 30 seconds.</p>
+                    <p>📧 iaoptiflow@gmail.com</p>
+                    <p>📱 +213 698 194 028</p>
+                    <p>💬 linkedin.com/in/optiflow-ia</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Product</h4>
+                    <a href="#features">Features</a>
+                    <a href="#pricing">Pricing</a>
+                    <a href="#demo">Demo</a>
+                    <a href="#">API Documentation</a>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Company</h4>
+                    <a href="#">About</a>
+                    <a href="#">Blog</a>
+                    <a href="#">Careers</a>
+                    <a href="#">Contact</a>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <a href="#">Help Center</a>
+                    <a href="#">Community</a>
+                    <a href="#">Status</a>
+                    <a href="#">Privacy Policy</a>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 OptiFlow AI. All rights reserved. Made with ❤️ for content creators worldwide.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Demo functionality
+        function runDemo() {
+            const button = document.getElementById('buttonText');
+            const results = document.getElementById('demoResults');
+            const url = document.getElementById('demoUrl').value;
+            
+            // URL validation
+            if (!url || !url.includes('http')) {
+                alert('Please enter a valid URL (e.g., https://techcrunch.com/article)');
+                return;
+            }
+            
+            // Show loading state
+            button.innerHTML = '<span class="loading"></span> Generating variants...';
+            
+            // Simulate API call
+            setTimeout(() => {
+                button.innerHTML = '✅ 25 Variants Generated!';
+                results.style.display = 'grid';
+                results.classList.add('animate-fade-in');
+                
+                // Scroll to results
+                results.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                
+                // Reset button after delay
+                setTimeout(() => {
+                    button.innerHTML = '🚀 Generate 25 Variants';
+                }, 4000);
+            }, 2500);
+        }
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+        
+        // Intersection Observer for animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-fade-in');
+                }
+            });
+        }, observerOptions);
+        
+        // Observe all cards and sections
+        document.querySelectorAll('.feature-card, .pricing-card, .stat, .platform-result').forEach(element => {
+            observer.observe(element);
+        });
+        
+        // Auto-fill demo URL on page load
+        window.addEventListener('load', function() {
+            const demoInput = document.getElementById('demoUrl');
+            if (demoInput && !demoInput.value) {
+                demoInput.value = 'https://techcrunch.com/2024/08/01/ai-startup-funding-round';
+            }
+        });
+        
+        // Handle pricing button clicks - WhatsApp integration
+        document.querySelectorAll('.plan-button').forEach(button => {
+            button.addEventListener('click', function() {
+                const planCard = this.closest('.pricing-card');
+                const planName = planCard.querySelector('.plan-name').textContent;
+                const planPrice = planCard.querySelector('.plan-price').textContent;
+                
+                // Create WhatsApp message
+                const message = `Hello OptiFlow AI! 👋
+
+I'm interested in the ${planName} plan at ${planPrice}/month.
+
+Could you please contact me to get started?
+
+Thank you!`;
+                
+                const whatsappUrl = `https://wa.me/213698194028?text=${encodeURIComponent(message)}`;
+                
+                // Open WhatsApp in new tab
+                window.open(whatsappUrl, '_blank');
+            });
+        });
+        
+        // Add floating CTA on scroll
+        let lastScrollTop = 0;
+        const floatingCTA = document.createElement('div');
+        floatingCTA.innerHTML = `
+            <a href="#pricing" class="btn btn-primary" style="position: fixed; bottom: 20px; right: 20px; z-index: 1000; box-shadow: 0 8px 30px rgba(0, 212, 255, 0.5);">
+                🚀 Get Started - €99/mo
+            </a>
+        `;
+        floatingCTA.style.cssText = `
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 1000;
+            transform: translateY(100px);
+            transition: transform 0.3s ease;
+            opacity: 0;
+        `;
+        document.body.appendChild(floatingCTA);
+        
+        window.addEventListener('scroll', function() {
+            const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            
+            if (scrollTop > 800) {
+                floatingCTA.style.transform = 'translateY(0)';
+                floatingCTA.style.opacity = '1';
+            } else {
+                floatingCTA.style.transform = 'translateY(100px)';
+                floatingCTA.style.opacity = '0';
+            }
+            
+            lastScrollTop = scrollTop;
+        });
+        
+        // Add interactive hover effects
+        document.querySelectorAll('.feature-card').forEach(card => {
+            card.addEventListener('mouseenter', function() {
+                this.style.background = 'rgba(0, 212, 255, 0.1)';
+            });
+            
+            card.addEventListener('mouseleave', function() {
+                this.style.background = 'rgba(22, 33, 62, 0.8)';
+            });
+        });
+        
+        // Demo URL suggestions
+        const urlSuggestions = [
+            'https://techcrunch.com/2024/08/01/ai-startup-funding-round',
+            'https://techcrunch.com/latest-tech-innovation',
+            'https://www.wired.com/future-of-technology',
+            'https://venturebeat.com/ai-breakthrough-news'
+        ];
+        
+        const demoInput = document.getElementById('demoUrl');
+        let suggestionIndex = 0;
+        
+        demoInput.addEventListener('focus', function() {
+            if (!this.value) {
+                this.value = urlSuggestions[suggestionIndex];
+                suggestionIndex = (suggestionIndex + 1) % urlSuggestions.length;
+            }
+        });
+        
+        // Add typing effect to hero title
+        function typeWriter(element, text, speed = 100) {
+            let i = 0;
+            element.innerHTML = '';
+            
+            function type() {
+                if (i < text.length) {
+                    element.innerHTML += text.charAt(i);
+                    i++;
+                    setTimeout(type, speed);
+                }
+            }
+            type();
+        }
+        
+        // Enhanced animations on scroll
+        window.addEventListener('scroll', function() {
+            const scrolled = window.pageYOffset;
+            const parallax = document.querySelector('.hero');
+            if (parallax) {
+                const speed = scrolled * 0.5;
+                parallax.style.transform = `translateY(${speed}px)`;
+            }
+        });
+    </script>
+</body>
+</html>
